@@ -47,6 +47,9 @@ document.onkeypress = function(event) {
     console.log('Try again, invalid character: ' + userGuess);
     setValue("#note", "Try again. Invalid character "+ userGuess);
   }
+  if((wins == 9) || (losses == 9) || (wins+losses == 9) ){
+    setValue("#note", "Game OVER! Reload the page to play again");
+  }
 }
 
 function setValue(nameID, value) {
